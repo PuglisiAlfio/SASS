@@ -1,0 +1,39 @@
+$div-border-color: red;
+$h1-color: green;
+$h1-color-decoration: blue;
+$article-border-color: green;
+$p-odd-color: blue;
+$p-even-color: red;
+
+div {
+    border: 2px solid $div-border-color;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+h1{
+    color: $h1-color;
+    text-decoration: underline;
+    text-decoration-color: $h1-color-decoration;
+    text-underline-position: under;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    border: 2px solid $article-border-color;
+    padding: 0.5rem;
+
+    &:nth-child(odd) {
+        color: $p-odd-color;
+    }
+    &:nth-child(even) {
+        color: $p-even-color;
+    }
+}
+
+
+
