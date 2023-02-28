@@ -1,0 +1,46 @@
+$h1-color: green;
+$h1-color-decoration: blue;
+$p-odd-color: blue;
+$p-even-color: red;
+
+@mixin property($color, $border-color, $font-size: 1rem){
+    color: $color;
+    border: 2px solid $border-color;
+    font-size: $font-size;
+    padding: 1rem;
+}
+
+div {
+    @include property(black, red);
+    margin: 1rem;
+    text-align: center;
+}
+
+h1 {
+    color: $h1-color;
+    text-decoration: underline;
+    text-decoration-color: $h1-color-decoration;
+    text-underline-position: under;
+}
+
+section:nth-child(2) {
+    display: flex;
+}
+
+article {
+    @include property(black, green);
+    padding: 0.5rem;
+
+    &:nth-child(odd) {
+        color: $p-odd-color;
+    }
+    &:nth-child(even) {
+        color: $p-even-color;
+    }
+}
+
+footer {
+    @include property(green, blue, 24px);
+    margin-top: 1rem;
+}
+

@@ -1,0 +1,43 @@
+div {
+  color: black;
+  border: 2px solid red;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+h1 {
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-underline-position: under;
+}
+
+section:nth-child(2) {
+  display: flex;
+}
+
+article {
+  color: black;
+  border: 2px solid green;
+  font-size: 1rem;
+  padding: 1rem;
+  padding: 0.5rem;
+}
+article:nth-child(odd) {
+  color: blue;
+}
+article:nth-child(even) {
+  color: red;
+}
+
+footer {
+  color: green;
+  border: 2px solid blue;
+  font-size: 24px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
