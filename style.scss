@@ -1,0 +1,48 @@
+@use "variables.scss";
+@use "functions.scss";
+
+$h1-color: variables.$h1-color;
+$h1-color-decoration: variables.$h1-color-decoration;
+$p-odd-color: variables.$p-odd-color;
+$p-even-color: variables.$p-even-color;
+
+
+@mixin property($color, $border-color, $font-size: 1rem){
+    color: $color;
+    border: functions.size-convertion(2) solid $border-color;
+    font-size: $font-size;
+    padding: functions.size-convertion(16);
+}
+
+div {
+    @include property(black, red);
+    margin: functions.size-convertion(16);
+    text-align: center;
+}
+
+h1 {
+    color: $h1-color;
+    text-decoration: underline;
+    text-decoration-color: $h1-color-decoration;
+    text-underline-position: under;
+}
+
+section:nth-child(2) {
+    display: flex;
+}
+
+article {
+    @include property(black, green);
+
+    &:nth-child(odd) {
+        color: $p-odd-color;
+    }
+    &:nth-child(even) {
+        color: $p-even-color;
+    }
+}
+
+footer {
+    @include property(green, blue, 24px);
+    margin-top: functions.size-convertion(16);
+}
