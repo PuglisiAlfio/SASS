@@ -29,7 +29,6 @@ section:nth-child(2) {
 
 article {
     @include property(black, green);
-    padding: 0.5rem;
 
     &:nth-child(odd) {
         color: $p-odd-color;
