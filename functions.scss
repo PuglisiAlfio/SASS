@@ -1,0 +1,4 @@
+@function size-convertion($numero){
+    $numero-convertito: ($numero / 16) + rem;
+    @return $numero-convertito;
+}
