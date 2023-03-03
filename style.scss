@@ -77,23 +77,29 @@ article {
     }
 }
 
-$classes: fs-1rem, fs-2rem, fs-3rem;
-
-@each $class in $classes {
-    @if $class == fs-1rem {
-        .fs-1rem{
-            font-size: functions.size-convertion(16); 
-        }
-    } @else if $class == fs-2rem {
-        .fs-2rem{
-            font-size: functions.size-convertion(32);
-        }
-    } @else {
-        .fs-3rem{
-            font-size: functions.size-convertion(48);
-        }
+@each $key, $value in (1rem: 1rem, 2rem: 2rem, 3rem: 3rem){
+    .fs-#{$key}{
+    font-size: $value
     } 
-}
+} 
+
+// $classes: fs-1rem, fs-2rem, fs-3rem;
+
+// @each $class in $classes {
+//     @if $class == fs-1rem {
+//         .fs-1rem{
+//             font-size: functions.size-convertion(16); 
+//         }
+//     } @else if $class == fs-2rem {
+//         .fs-2rem{
+//             font-size: functions.size-convertion(32);
+//         }
+//     } @else {
+//         .fs-3rem{
+//             font-size: functions.size-convertion(48);
+//         }
+//     } 
+// }
 
 footer {
     @include property(green, blue, 24px);
